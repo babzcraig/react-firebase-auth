@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import firebase from 'firebase';
-import { Button, Card, CardSection, Input, Spinner } from './common'
+import { MyButton, Card, CardSection, Input, Spinner } from './common'
 
 class LoginForm extends Component {
   state = {
@@ -41,7 +41,7 @@ class LoginForm extends Component {
     if (this.state.loading) {
       return <Spinner size={"small"} />
     } else {
-      return <Button onPress={this.onButtonPress.bind(this)}>Log in</Button>
+      return <MyButton onPress={this.onButtonPress.bind(this)}>Log in</MyButton>
     }
   }
 
